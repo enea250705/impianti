@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcola Risparmio - Victory | L'energia del cambiamento</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="logovictory.png" alt="Victory - L'energia del cambiamento" class="logo-img">
+                </a>
+                <nav class="nav" id="nav">
+                    <a href="prodotti.html" class="nav-link">Prodotti</a>
+                    <a href="esperienze.html" class="nav-link">Esperienze dei clienti</a>
+                    <a href="informazioni.html" class="nav-link">Informazioni su di noi</a>
+                    <a href="industria.html" class="nav-link">Sei un'industria?</a>
+                    <a href="calcola.html" class="nav-link active">Calcola risparmio</a>
+                    <a href="faq.html" class="nav-link">FAQ</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="#form" class="btn-primary">Calcola i bonus</a>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('FOTO IMPIANTI/PHOTO-2025-04-24-08-18-43.jpg');">
+        <div class="container">
+            <h1 class="page-title">Calcola il Tuo Risparmio</h1>
+            <p class="page-subtitle">Scopri quanto puoi risparmiare con un impianto fotovoltaico</p>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section" id="form">
+        <div class="container">
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <h2>Inserisci i Dati della Tua Casa</h2>
+                    <form id="calculatorForm" class="calculator-form-fields">
+                        <div class="form-group">
+                            <label for="cap">CAP *</label>
+                            <input type="text" id="cap" name="cap" placeholder="Es. 20100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="consumo">Consumo annuo di energia (kWh) *</label>
+                            <input type="number" id="consumo" name="consumo" placeholder="Es. 3500" required>
+                            <small>Trova il valore sulla tua bolletta</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="superficie">Superficie tetto disponibile (m²)</label>
+                            <input type="number" id="superficie" name="superficie" placeholder="Es. 50">
+                        </div>
+                        <div class="form-group">
+                            <label for="orientamento">Orientamento del tetto</label>
+                            <select id="orientamento" name="orientamento">
+                                <option value="sud">Sud (ottimale)</option>
+                                <option value="sud-est">Sud-Est</option>
+                                <option value="sud-ovest">Sud-Ovest</option>
+                                <option value="est">Est</option>
+                                <option value="ovest">Ovest</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="inclinazione">Inclinazione tetto</label>
+                            <select id="inclinazione" name="inclinazione">
+                                <option value="30">30° (ottimale)</option>
+                                <option value="20">20°</option>
+                                <option value="40">40°</option>
+                                <option value="piano">Piano</option>
+                            </select>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="batteria" name="batteria">
+                                Desidero anche una batteria di accumulo
+                            </label>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="wallbox" name="wallbox">
+                                Desidero anche una wallbox per auto elettrica
+                            </label>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="pompa" name="pompa">
+                                Desidero anche una pompa di calore
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-hero">Calcola Risparmio</button>
+                    </form>
+                </div>
+                <div class="calculator-results" id="results">
+                    <h2>Il Tuo Risparmio Stimato</h2>
+                    <div class="results-placeholder">
+                        <p>Compila il modulo per vedere il tuo risparmio stimato</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Incentives Section -->
+    <section class="incentives-section">
+        <div class="container">
+            <h2 class="section-title">Incentivi Disponibili</h2>
+            <div class="incentives-grid">
+                <div class="incentive-card">
+                    <h3>Ecobonus 50%</h3>
+                    <p>Detrazione fiscale del 50% su impianti fotovoltaici e sistemi di accumulo. Rata in 10 anni.</p>
+                    <div class="incentive-amount">Fino a 96.000€</div>
+                </div>
+                <div class="incentive-card">
+                    <h3>Conto Termico 3.0</h3>
+                    <p>Contributo a fondo perduto per pompe di calore e sistemi di riscaldamento efficienti.</p>
+                    <div class="incentive-amount">Fino a 30.000€</div>
+                </div>
+                <div class="incentive-card">
+                    <h3>Superbonus 90%</h3>
+                    <p>Per interventi di riqualificazione energetica complessiva degli edifici.</p>
+                    <div class="incentive-amount">Fino a 96.000€</div>
+                </div>
+                <div class="incentive-card">
+                    <h3>IVA Agevolata 10%</h3>
+                    <p>Aliquota IVA ridotta al 10% invece del 22% per impianti fotovoltaici.</p>
+                    <div class="incentive-amount">Risparmio 12%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Savings Breakdown -->
+    <section class="savings-breakdown">
+        <div class="container">
+            <h2 class="section-title">Come Calcoliamo il Risparmio</h2>
+            <div class="breakdown-content">
+                <div class="breakdown-item">
+                    <h3>1. Autoconsumo</h3>
+                    <p>L'energia prodotta e consumata direttamente ti fa risparmiare il costo dell'energia dalla rete (circa 0,25€/kWh).</p>
+                </div>
+                <div class="breakdown-item">
+                    <h3>2. Scambio sul Posto</h3>
+                    <p>L'energia in eccesso viene immessa in rete e ti viene riconosciuta economicamente.</p>
+                </div>
+                <div class="breakdown-item">
+                    <h3>3. Incentivi Fiscali</h3>
+                    <p>Ecobonus e altri incentivi riducono significativamente il costo dell'investimento.</p>
+                </div>
+                <div class="breakdown-item">
+                    <h3>4. Indipendenza Energetica</h3>
+                    <p>Riduzione della dipendenza dalle fluttuazioni dei prezzi dell'energia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Pronto a Iniziare?</h2>
+            <p class="cta-subtitle">Richiedi una consulenza gratuita e senza impegno</p>
+            <a href="#form" class="btn-hero">Calcola Subito</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="logovictory.png" alt="Victory - L'energia del cambiamento" class="footer-logo">
+                    <p class="footer-slogan">L'energia del cambiamento</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Chi siamo</h5>
+                    <ul>
+                        <li><a href="informazioni.html">Prodotto</a></li>
+                        <li><a href="informazioni.html">Servizi</a></li>
+                        <li><a href="esperienze.html">Esperienze dei clienti</a></li>
+                        <li><a href="faq.html">Domande Frequenti</a></li>
+                        <li><a href="informazioni.html#lavora">Lavora con noi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Rivista</h5>
+                    <ul>
+                        <li><a href="prodotti.html">Impianto fotovoltaico</a></li>
+                        <li><a href="prodotti.html">Pompa di calore</a></li>
+                        <li><a href="calcola.html">Costo fotovoltaico</a></li>
+                        <li><a href="calcola.html">Bonus fotovoltaico 2026</a></li>
+                        <li><a href="calcola.html">Bonus pompa di calore 2026</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Informazioni</h5>
+                    <ul>
+                        <li><a href="informazioni.html#contatti">Contatti</a></li>
+                        <li><a href="termini.html">Termini e Condizioni</a></li>
+                        <li><a href="privacy.html">Privacy dei dati</a></li>
+                        <li><a href="#cookie">Impostazioni dei cookie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Contatti</h5>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 049 744 19 12</li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:centralino@ecovictory.it">centralino@ecovictory.it</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Victory. Tutti i diritti riservati.</p>
+                <p class="footer-note">Victory Srl - Viale Regione Veneto 26, 35127 Padova (PD) - P.IVA 12345678901</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="calculator.js"></script>
+</body>
+</html>
+
