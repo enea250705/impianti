@@ -358,7 +358,20 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
+    sections.forEach((section, index) => {
+        // Skip the first section after hero (index 1) - make it visible immediately
+        // Also skip page-hero sections
+        if (section.classList.contains('page-hero') || section.classList.contains('hero')) {
+            return; // Don't animate hero sections
+        }
+        
+        // For products-detail page, show first section immediately
+        if (section.classList.contains('products-detail') && index === 1) {
+            section.style.opacity = '1';
+            section.style.transform = 'translateY(0)';
+            return;
+        }
+        
         section.style.opacity = '0';
         section.style.transform = 'translateY(30px)';
         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
