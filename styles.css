@@ -926,7 +926,7 @@ body {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 32px;
 }
 
@@ -934,13 +934,15 @@ body {
     background: var(--bg-white);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
-    padding: 28px 24px;
-    text-align: center;
+    padding: 30px 24px 26px;
+    text-align: left;
     transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
     box-shadow: var(--shadow-card);
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
+    align-items: flex-start;
 }
 
 .product-card:hover {
@@ -973,7 +975,7 @@ body {
 }
 
 .product-card h3 {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 10px;
     color: var(--text-dark);
