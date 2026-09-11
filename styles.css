@@ -1269,11 +1269,10 @@ body {
 }
 
 .footer-logo {
-    height: 44px;
+    height: 54px;
     width: auto;
-    max-width: 180px;
+    max-width: 200px;
     margin-bottom: 12px;
-    filter: brightness(0) invert(1);
     opacity: 0.95;
 }
 
